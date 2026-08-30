@@ -7,7 +7,7 @@ from model import get_class
 bot = telebot.TeleBot("8610982848:AAH2Yp6urZAG0d2HrNVguCpne-3_AQNTQSg")
 
 
-def gen_duck_image_url():
+def get_duck_image_url():
     """
         Получает рандомную картинку с сайта
     """
@@ -30,7 +30,7 @@ def duck(message):
     """
         Возвращает фото утки
     """
-    image_url = gen_duck_image_url()
+    image_url = get_duck_image_url()
     bot.send_message(message.chat.id, image_url)
 
 
